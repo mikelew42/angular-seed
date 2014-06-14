@@ -1,0 +1,30 @@
+{
+  "name": "angular-seed",
+  "version": "0.0.0",
+  "description": "Starter for angular with gulp live-reload",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikelew42/angular-seed.git"
+  },
+  "keywords": [
+    "angular",
+    "gulp"
+  ],
+  "author": "Michi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikelew42/angular-seed/issues"
+  },
+  "homepage": "https://github.com/mikelew42/angular-seed",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.4.3",
+    "gulp": "^3.8.0",
+    "gulp-livereload": "^2.1.0",
+    "open": "0.0.5"
+  }
+}

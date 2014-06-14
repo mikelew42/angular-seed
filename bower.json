@@ -1,0 +1,27 @@
+{
+  "name": "angular-seed",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mikelew42/angular-seed",
+  "authors": [
+    "Michi <mike@lew42.com>"
+  ],
+  "description": "Starter for angular with some gulp live-reload",
+  "main": "public/index.html",
+  "keywords": [
+    "angular",
+    "gulp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "jquery": "~2.1.1",
+    "normalize-css": "~3.0.1"
+  }
+}
