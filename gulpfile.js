@@ -5,7 +5,16 @@ var gulp = require('gulp'),
 	port = 80;
 
 gulp.task('server', function(next){
-	var server = express().use(express.static( __dirname + '/public' )).listen(port, next);
+	var server = express();
+	server.use('/js', express.static(__dirname + '/public/js'));
+	server.use('/css', express.static(__dirname + '/public/css'));
+	server.use('/html', express.static(__dirname + '/public/html'));
+	server.all('/*', function(req, res, next){
+		res.sendfile('/public/index.html', {root: __dirname });
+	})
+
+	//server.use(express.static( __dirname + '/public' ));
+	server.listen(port, next);
 	var portStr = port == 80 ? '' : ':' + port;
 	open("http://localhost" + portStr, "chrome");
 });
