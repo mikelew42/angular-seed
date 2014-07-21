@@ -10,9 +10,9 @@ angular.module('App', ['ngRoute', 'ui.router'])
 		url: '/project1',
 		templateUrl: 'html/project1.html'
 	})
-	.state('project2', {
-		url: '/project2',
-		template: 'project2'
+	.state('tree', {
+		url: '/tree',
+		template: '<tree></tree>'
 	})
 	$sP.state('post', {
 		url: '/:postId',
@@ -35,10 +35,28 @@ angular.module('App', ['ngRoute', 'ui.router'])
 			content: 'Some <b>html</b> content.'
 		}
 	};
+
+	$scope.host = new MPL.Host();
 }])
 
 .controller('Post', ['$scope', '$state', function($scope, $state){
 	$scope.state = $state;
 	if ($scope.posts[$state.params.postId])
 		$scope.post = $scope.posts[$state.params.postId];
+}])
+
+.directive('tree', [function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'html/tree.html'
+	};
+}])
+
+.factory('Tree', [function(){
+	function Tree(){ this.initialize.apply(this, arguments); }
+	Tree.prototype = {
+		constructor: Tree,
+		initialize: function(){}
+	};
+	return Tree;
 }])
